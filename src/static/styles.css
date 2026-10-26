@@ -16,7 +16,6 @@ body {
 }
 
 header {
-  text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
@@ -24,8 +23,37 @@ header {
   border-radius: 5px;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.teacher-controls,
+#session-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-login-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 12px;
+  margin: 20px 20px 0;
+  text-align: left;
+}
+
+.header-login-form .form-group {
+  min-width: 180px;
+  margin-bottom: 0;
 }
 
 main {
@@ -190,6 +218,22 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 640px) {
+  .header-content,
+  .header-login-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .header-login-form .form-group {
+    min-width: 0;
+  }
+
+  .teacher-controls {
+    justify-content: space-between;
+  }
 }
 
 footer {
